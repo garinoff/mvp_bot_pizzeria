@@ -1,0 +1,36 @@
+# --- Основное ---
+python-dotenv==1.0.1         # Загрузка переменных из .env
+requests==2.31.0             # Для HTTP-запросов
+Flask==2.3.3                 # Минимальный веб-сервер для webhook (можно заменить на FastAPI)
+gunicorn==21.2.0             # WSGI сервер для продакшена
+
+# --- Telegram API ---
+python-telegram-bot==20.6    # Telegram Bot API
+
+# --- SQLite / БД ---
+sqlalchemy==2.0.30           # ORM для масштабируемой работы с БД (вместо raw SQLite)
+pysqlite3-binary==0.5.1      # Драйвер SQLite (если требуется отдельно)
+
+# --- Google Sheets ---
+gspread==5.12.0
+oauth2client==4.1.3
+
+# --- Оплаты ---
+stripe==7.9.0
+
+# --- Локализация и языки ---
+babel==2.14.0                # На будущее для интернационализации
+
+# --- AI и ML (опционально) ---
+openai==1.23.5               # GPT-интеграция для smart-reorder или FAQ
+transformers==4.41.1         # Для кастомных моделей (если потребуется)
+
+# --- Тестирование ---
+pytest==8.2.1
+coverage==7.5.3
+
+# --- Dev tools ---
+loguru==0.7.2                # Улучшенное логирование
+
+fastapi==0.111.0
+uvicorn==0.30.0

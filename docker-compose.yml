@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  pizzabot:
+    container_name: pizzabot
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "5000:5000"  # если бот работает на Flask/FastAPI
+    command: uvicorn src.main:app --host 0.0.0.0 --port 5000
